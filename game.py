@@ -1,25 +1,50 @@
 
 
+from human import Human
+from ai import AI
 
-
-
-
-
-# """
-# Classes - EACH IN OWN FILE
-# Game
-# Player
-# AI(Player)
-# Human(Player)
-# """
-
+import random
 
 class Game:
+    def __int__(self):
+        self.
+
+    def run_game(self):
+        print( " Rules for Rock-Paper-Scissors-Lizard-Spock:")
+
+        print("Rock crushes Scissors")
+        print("Scissors cuts Paper")
+        print("Paper covers Rock")
+        print("Rock crushes Lizard")
+        print("Lizard poisons Spock")
+        print("Spock smashes Scissors")
+        print("Scissors decapitates Lizard")
+        print("Lizard eats Paper")
+        print("Paper disproves Spock")
+        print("Spock vaporizes Rock")
+
+
+
     def __init__(self):
         self.player_one = Human()
         self.player_two = None
+        pass
 
-    def run_game(self):
+
+    def game_rules(self):
+
+
+
+def game_
+
+
+
+
+
+
+
+
+
         # Intro
         # Display a welcome message
         # Instructions for play/rules
