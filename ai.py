@@ -6,9 +6,11 @@ class AI(Player):
         self.ai_gesture_list = ["rock", "Scissors", "Paper", "Lizard", "Spock" ]
         self.chosen_gesture = " "
         super().__init__()
-        self.set_ai_name()
+        self.ai_name()
 
         # Randomly generate name from a list of characters
+    def ai_name(self):
+            pass
 
     def choose_gesture(self):
         random_gesture = random.randint(0, len(self.ai_gesture_list) - 1)

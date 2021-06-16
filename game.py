@@ -1,17 +1,21 @@
 
 
-from human import Human
-from ai import AI
-
-import random
+from human import  Human
 
 class Game:
     def __int__(self):
-        self.
+        self.player_one = Human()
+        self.player_two
 
     def run_game(self):
-        print( " Rules for Rock-Paper-Scissors-Lizard-Spock:")
 
+    def welcome_player(self):
+        print("")
+
+
+    def instructions(self):
+        print( " Rules for Rock-Paper-Scissors-Lizard-Spock:")
+        print(" ")
         print("Rock crushes Scissors")
         print("Scissors cuts Paper")
         print("Paper covers Rock")
@@ -23,19 +27,35 @@ class Game:
         print("Paper disproves Spock")
         print("Spock vaporizes Rock")
 
+    # if gesture_input.lower() == "help":
+    #     # lets show user the instructions again or if the wrong input is entered
+    #     pass
+    # elif inp.lower() == "exit":
+    #     clear()
+    #     break
+    # elif inp.lower() == "rock":
+    #     player_move = 0
+    # elif inp.lower() == "paper":
+    #     player_move = 1
+    # elif inp.lower() == "scissors":
+    #     player_move = 2
+    # elif inp.lower() == "lizard":
+    #     player_move = 3
+    # elif inp.lower() == "spock":
+    #     player_move = 4
 
 
-    def __init__(self):
-        self.player_one = Human()
-        self.player_two = None
-        pass
+
+
+
+
 
 
     def game_rules(self):
 
 
 
-def game_
+
 
 
 
