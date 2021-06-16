@@ -1,20 +1,30 @@
+from human import Human
+from ai import AI
 
-
-from human import  Human
 
 class Game:
     def __int__(self):
         self.player_one = Human()
-        self.player_two
+        self.player_two = None   # gaming logic for selecting the multi player/ or single user against the AI
 
     def run_game(self):
+        self.instructions()
 
-    def welcome_player(self):
+        self.game_selected_mode()
+
+        self.player_one.chosen_gesture()
+
+        self.player_two.chosen_gesture()
+
+        self.game_ends()
+
+        self.winner_announced()
+
+    def instructions(self):    # Create re-select key in the future? MVP is number uno
+
+        print("Welcome to Rock Paper Scissors Lizard Spock")
         print("")
-
-
-    def instructions(self):
-        print( " Rules for Rock-Paper-Scissors-Lizard-Spock:")
+        print(" The rules for Rock-Paper-Scissors-Lizard-Spock:")
         print(" ")
         print("Rock crushes Scissors")
         print("Scissors cuts Paper")
@@ -27,31 +37,26 @@ class Game:
         print("Paper disproves Spock")
         print("Spock vaporizes Rock")
 
-    # if gesture_input.lower() == "help":
-    #     # lets show user the instructions again or if the wrong input is entered
-    #     pass
-    # elif inp.lower() == "exit":
-    #     clear()
-    #     break
-    # elif inp.lower() == "rock":
-    #     player_move = 0
-    # elif inp.lower() == "paper":
-    #     player_move = 1
-    # elif inp.lower() == "scissors":
-    #     player_move = 2
-    # elif inp.lower() == "lizard":
-    #     player_move = 3
-    # elif inp.lower() == "spock":
-    #     player_move = 4
+
+# User Input validation: Conditionals for for counting the number of rounds won(while? for?
+
+    def game_selected_mode(self):
+        game_mode = input(" Would you like to play  ")
+        pass
+
+    def game_ends(self):
+        print("The game has ended ")
+        pass
+
+    # Once the game has ended: Keep or just announce all in the winner announcement?
+    def winner_announced(self):
+        pass
+        # after concluding the games end will announce the winner of the game with visual score bord using
+        # a simple column row board.
 
 
 
 
-
-
-
-
-    def game_rules(self):
 
 
 

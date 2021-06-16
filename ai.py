@@ -3,7 +3,7 @@ import random
 
 class AI(Player):
     def __init__(self):
-        self.ai_gesture_list = ["rock", "Scissors", "Paper", "Lizard", "Spock" ]
+        self.ai_gesture_list = ["Rock", "Scissors", "Paper", "Lizard", "Spock" ]
         self.chosen_gesture = " "
         super().__init__()
         self.ai_name()
