@@ -1,6 +1,7 @@
 from player import Player
 import random
 
+
 class AI(Player):
     def __init__(self):
         self.ai_gesture_list = ["Rock", "Scissors", "Paper", "Lizard", "Spock" ]

@@ -10,11 +10,13 @@ class Game:
     def run_game(self):
         self.instructions()
 
-        self.game_selected_mode()
+        self.choose_game_mode()
 
-        self.player_one.chosen_gesture()
 
-        self.player_two.chosen_gesture()
+        while self.player_one.score <=3 or self.player_two.score <=3:
+            self.player_one.chosen_gesture()
+            self.player_two.chosen_gesture()
+            self.winnner_of_round()
 
         self.game_ends()
 
@@ -24,7 +26,7 @@ class Game:
 
         print("Welcome to Rock Paper Scissors Lizard Spock")
         print("")
-        print(" The rules for Rock-Paper-Scissors-Lizard-Spock:")
+        print("The rules for Rock-Paper-Scissors-Lizard-Spock:")
         print(" ")
         print("Rock crushes Scissors")
         print("Scissors cuts Paper")
@@ -37,16 +39,26 @@ class Game:
         print("Paper disproves Spock")
         print("Spock vaporizes Rock")
 
-
 # User Input validation: Conditionals for for counting the number of rounds won(while? for?
+    def choose_game_mode(self):
+        print("How many players for your game?")
+        response = input()
+        if response == 2:
+            self.player_two = Human()
+        else:
+            self.player_two = AI()
 
-    def game_selected_mode(self):
-        game_mode = input(" Would you like to play  ")
-        pass
+    def winnner_of_round(self):
+        if self.player_one.chosen_gesture == 'rock':
+            if self.player_two.chosen_gesture == 'rock':
+                print('tie')
+            elif self.player_two.chosen_gesture == 'paper':
+                self.player_two.score+=1
+                print("p2 won")
 
-    def game_ends(self):
-        print("The game has ended ")
-        pass
+
+
+
 
     # Once the game has ended: Keep or just announce all in the winner announcement?
     def winner_announced(self):
@@ -56,23 +68,6 @@ class Game:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # Intro
-        # Display a welcome message
-        # Instructions for play/rules
         # Choose game mode - Single player or Multi player
 
         # Game Rounds
@@ -84,12 +79,5 @@ class Game:
         # End Game
         # Display winner of game
         # Prompt to play again? - Not MVP
-        pass
 
-    def choose_game_mode(self):
-        print("How many players?")
-        response = input()
-        if response == 2:
-            self.player_two = Human()
-        else:
-            self.player_two = AI()
+
