@@ -1,6 +1,6 @@
 from human import Human
 from ai import AI
-
+from player import Player
 
 class Game:
     def __int__(self):
@@ -41,19 +41,20 @@ class Game:
 
 # User Input validation: Conditionals for for counting the number of rounds won(while? for?
     def choose_game_mode(self):
-        print("How many players for your game?")
-        response = input()
-        if response == 2:
-            self.player_two = Human()
-        else:
-            self.player_two = AI()
+        number_players = int(input("How many players for your game?"))
+        if number_players == 2:
+            self.player_two = Human(input("Enter the name of player two"))
+            if number_players == 0:
+                print("That is not a valid option. There can only be 1 or 2 players")
+            else:
+                self.player_two = AI("R2D2")
 
     def winnner_of_round(self):
         if self.player_one.chosen_gesture == 'rock':
             if self.player_two.chosen_gesture == 'rock':
-                print('tie')
+                print('Its a draw')
             elif self.player_two.chosen_gesture == 'paper':
-                self.player_two.score+=1
+                self.player_two.score += 1
                 print("p2 won")
 
 
