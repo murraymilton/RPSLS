@@ -1,16 +1,14 @@
 class Player:
-    def __init__(self):
-        self.name = ""
-        self.score = 0
-        self.chosen_gesture = ""
+    def __init__(self, name):
+        self.name = name
         self.gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+        self.score = 0
+        self.chosen_gesture_player = 0
 
     def choose_gesture_player(self):
-        gesture_input = input("Enter your move: ")
-        for gesture in self.gestures:
-            if gesture_input.lower() == gesture.lower():
-               print(f"{gesture_input}")
-
+        return int(self.chosen_gesture_player)
+    def get_player_name(self):
+        self.gesture_name = self.gestures[self.chosen_gesture_player]
 
 
 
