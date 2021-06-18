@@ -44,7 +44,7 @@ class Game:
         number_players = int(number_players)
         if number_players == 0 or number_players > 2:
             print("That is not a valid option. There can only be 1 or 2 players")
-        if number_players == 2:
+        elif number_players == 2:
             self.player_one = Human()
             self.player_two = Human()
         elif number_players == 1:
@@ -61,23 +61,20 @@ class Game:
         self.player_two.choose_gesture_player()
 
     def game_start(self):
-        while self.player_one.score < 3 and self.player_two.score < 3:
-            if self.player_one.score == 3 or self.player_two == 3:
+        while self.player_one.score < 2 and self.player_two.score < 2:
+            if self.player_one.score == 2:
                 self.winner_announced()
-
+            if self.player_two.score < 2:
+                self.winner_announced()
             if self.player_one.chosen_gesture.lower() == self.player_two.chosen_gesture.lower():
                 print("There has been a draw!")
 
 
-
-
-
     def winner_announced(self):
-        if self.player_one.score == 3:
+        if self.player_one.score == 2:
             print(f"{self.player_one.name} has won the game!")
-            if self.player_two.score == 3:
+            if self.player_two.score == 2:
                 print(f"{self.player_two.name} has won the game!")
-
 
     def another_round(self):
         pass
