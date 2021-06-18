@@ -2,9 +2,10 @@ from player import Player
 
 
 class Human(Player):
-    def __init__(self, name):
+    def __init__(self):
         self.gestures = ""
-        super().__init__(name)
+        super().__init__()
+        self.set_name()
 
     def set_name(self):
-        self.name = input("Enter player name")
+        self.name = input("Enter your player name")

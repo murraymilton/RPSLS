@@ -1,15 +1,17 @@
 from player import Player
+
 import random
 
 
 class AI(Player):
     def __init__(self):
         super().__init__()
+        self.set_ai_name()
         self.gestures = ""
         self.ai_gesture_list = []
 
     def set_ai_name(self):
-        self.name = " Obi-Wan Kenobi"
+        self.name = "Obi-Wan Kenobi"
 
     def choose_gesture(self):
         random_gesture = random.randint(0, len(self.gestures) - 1)
