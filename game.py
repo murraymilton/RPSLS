@@ -89,6 +89,10 @@ class Game:
 
 
 
+# Revise conditional statement to increment each round once a winner is announced.
+
+# Winner total will be resolved by using the increment of +=1 each round a user is announced
+
 
 
 
