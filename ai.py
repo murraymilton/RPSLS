@@ -9,7 +9,7 @@ class AI(Player):
         self.ai_gesture_list = []
 
     def set_ai_name(self):
-        self.name = "R2D2"
+        self.name = " Obi-Wan Kenobi"
 
     def choose_gesture(self):
         random_gesture = random.randint(0, len(self.gestures) - 1)
