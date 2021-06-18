@@ -5,12 +5,14 @@ import random
 class AI(Player):
     def __init__(self):
         super().__init__()
-        self.gestures = [0, 1, 2, 3, 4]
+        self.gestures = ""
         self.ai_gesture_list = []
+
+    def set_ai_name(self):
+        self.name = "R2D2"
 
     def choose_gesture(self):
         random_gesture = random.randint(0, len(self.gestures) - 1)
-        self.gestures = self.ai_gesture_list[random_gesture]
-        ai_input = random_gesture
-        self.chosen_gesture_player = int(ai_input)
-        self.get_player_name()
+        ai_gesture_list = self.ai_gesture_list[random_gesture]
+        self.gestures = ai_gesture_list
+
