@@ -11,7 +11,7 @@ class Player:
         gesture_input = input(f"{self.name} Enter your gesture")
         for gesture in self.gestures:
             if gesture_input.lower() == gesture.lower():
-                self.choose_gesture_player = gesture
+                self.chosen_gesture = gesture
                 return
         else:
             print("Not a valid input")

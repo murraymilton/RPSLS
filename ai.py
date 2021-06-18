@@ -5,7 +5,6 @@ import random
 
 class AI(Player):
     def __init__(self):
-        super().__init__()
         self.set_ai_name()
         self.gestures = ""
         self.ai_gesture_list = []

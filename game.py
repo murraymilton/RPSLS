@@ -1,6 +1,5 @@
 from human import Human
 from ai import AI
-from player import Player
 
 
 class Game:
@@ -17,13 +16,13 @@ class Game:
 
         self.player_two_chosen_gesture()
 
-        self.winner_of_round()
+        self.game_start()
 
         self.winner_announced()
 
-        self.another_round()
+        self.another_round()   # Create re-play key option?
 
-    def instructions(self):    # Create re-select key in the future? MVP is number uno
+    def instructions(self):
 
         print("Welcome to Rock Paper Scissors Lizard Spock")
         print("______________________________________________")
@@ -56,37 +55,28 @@ class Game:
 
     def player_one_chosen_gesture(self):
         self.player_one.show_gesture_options()
-        self.player_one.chosen_gesture()
+        self.player_one.choose_gesture_player()
 
     def player_two_chosen_gesture(self):
-        self.player_two_chosen_gesture()
+        self.player_two.choose_gesture_player()
 
-    def winner_of_round(self):
+    def game_start(self):
         while self.player_one.score < 3 and self.player_two.score < 3:
             if self.player_one.score == 3 or self.player_two == 3:
                 self.winner_announced()
 
             if self.player_one.chosen_gesture.lower() == self.player_two.chosen_gesture.lower():
                 print("There has been a draw!")
-                return
 
 
 
-    # def game_ends(self):
-    #         pass
 
-      #Revise conditional statement to increment each round once a winner is announced.
-
-    # Revise conditional statement to increment each round once a winner is announced.
-
-    # Winner total will be resolved by using the increment of +=1 each round a user is announced
 
     def winner_announced(self):
         if self.player_one.score == 3:
             print(f"{self.player_one.name} has won the game!")
             if self.player_two.score == 3:
                 print(f"{self.player_two.name} has won the game!")
-
 
 
     def another_round(self):
